@@ -2,12 +2,12 @@
 Self-Driving Car Engineer Nanodegree Program
    
 
-###The Goal of this Project
+### The Goal of this Project
 The goal of this project is to design a path planner that is able to create smooth, safe paths for the car to follow along a 3 lane highway with traffic. A successful path planner will be able to keep inside its lane, avoid hitting other cars, and pass slower moving traffic all by using localization, sensor fusion, and map data.
 
-##Rubric
-###Compilation
-####The code compiles correctly.
+## Rubric
+### Compilation
+#### The code compiles correctly.
 
 A Class called Sensor has been created, so line 10 of CMakeLists.txt has changed to include this cpp file.
 
@@ -15,8 +15,8 @@ set(sources src/main.cpp src/sensor.cpp)
 
 This file is included in the repo.
 
-##Valid Trajectories
-###The car is able to drive at least 4.32 miles without incident.
+## Valid Trajectories
+### The car is able to drive at least 4.32 miles without incident.
 
 The fist step it was to make the car go forward, and obviously with incidents, the car was going out of the road.
 
@@ -42,7 +42,7 @@ The speed is decreased to 45 to perform a lane change.
 Finally, if there is a command to change the lane, some action is performed, and if not, 
 ![Sufficient](./images/max_distance_without_incident.png)
 
-###The car drives according to the speed limit.
+### The car drives according to the speed limit.
 The car drives if it can to he maximum speed.
 
 ![Sufficient](./images/keep_lane_and_speed.png)
@@ -51,25 +51,25 @@ It it cant, it tries to drive at the same speed of the front car, keeping a safe
 
 It it needs to change lane and it goes at maximum speed, it needs to brake to 45 mph.
 
-###Max Acceleration and Jerk are not Exceeded.
+### Max Acceleration and Jerk are not Exceeded.
 The problems often to be when changing lanes, so speed is decreased to make the change.
 
 Aceleration and braking is well performed.
 
 Tha path plan is smooth enough to not exceed jerking.
 
-###Car does not have collisions.
+### Car does not have collisions.
 The firs more conservative path planning was so secure. The last one its a little more dangerous, but it performs better.
 
-###The car stays in its lane, except for the time between changing lanes.
+### The car stays in its lane, except for the time between changing lanes.
 The car allways stays in its lane. With the planning for the best road, it can make some lane change on an empty like road, to prevent cars ahead far away.
 
-###The car is able to change lanes
+### The car is able to change lanes
 The path planner looks for cars ahead, so it recommends the best lane, and the car changes when it cans.
 
 ![Sufficient](./images/lane_change.png)
 
-##Final result
+## Final result
 
  <a href="http://www.youtube.com/watch?feature=player_embedded&v=G0webYzBGLk
 " target="_blank"><img src="http://img.youtube.com/vi/G0webYzBGLk/0.jpg" 
@@ -77,7 +77,7 @@ alt="path planning" width="600" border="10" /></a>
 
 
 
-##Original Readme.md
+## Original Readme.md
 
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).  
